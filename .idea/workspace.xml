@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="RockPaperScissors:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2db5f2d4-aada-4b6f-a8ba-486533f01fca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/RockPaperScissors_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/ciseaux.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/feuille.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/pierre.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RockPaperScissors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RockPaperScissors.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ciseaux.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feuille.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pierre.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,17 +54,27 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/eclipse/eclipse-workspace/RockPaperScissors"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/eclipse/eclipse-workspace/RockPaperScissors/src/res",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\eclipse\eclipse-workspace\RockPaperScissors\src\res" />
       <recent name="D:\eclipse\eclipse-workspace\RockPaperScissors" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\eclipse\eclipse-workspace\RockPaperScissors" />
+      <recent name="D:\eclipse\eclipse-workspace\RockPaperScissors\solong" />
+      <recent name="D:\eclipse\eclipse-workspace\RockPaperScissors\src\res" />
+      <recent name="D:\eclipse\eclipse-workspace\RockPaperScissors\src\res\images" />
+      <recent name="D:\eclipse\eclipse-workspace\RockPaperScissors\src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -74,5 +98,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

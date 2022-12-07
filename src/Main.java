@@ -3,11 +3,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
+import java.net.URL;
 
 public class Main {
     public static void main(String[] args) {
 
-        GameWindow gameWindow = new GameWindow();
+        new GameWindow();
 
     }
 
@@ -20,9 +21,14 @@ public class Main {
 
         GameWindow() { // crée la fenêtre de jeu
 
-            ImageIcon pierreIcon = new ImageIcon("pierre.png"); // (c) Freepik
+            /*ImageIcon pierreIcon = new ImageIcon("pierre.png"); // (c) Freepik
             ImageIcon feuilleIcon = new ImageIcon("feuille.png"); // (c) Pixel perfect
-            ImageIcon ciseauxIcon = new ImageIcon("ciseaux.png"); // (c) Freepik
+            ImageIcon ciseauxIcon = new ImageIcon("ciseaux.png"); // (c) Freepik*/
+
+            ImageIcon pierreIcon = new ImageIcon(getClass().getResource("/res/pierre.png")); // (c) Freepik
+            ImageIcon feuilleIcon = new ImageIcon(getClass().getResource("/res/feuille.png")); // (c) Pixel perfect
+            ImageIcon ciseauxIcon = new ImageIcon(getClass().getResource("/res/ciseaux.png")); // (c) Freepik
+
 
             JLabel debutPartie = new JLabel("Choisissez votre arme pour le duel :");
 
@@ -86,7 +92,7 @@ public class Main {
         @Override //Définit les choix du joueur et de l'ordinateur
         public void actionPerformed(ActionEvent e) {
 
-            int choixJoueur = 0;
+            int choixJoueur = 8;
             int choixOrdinateur;
 
             Random aleaOrdi = new Random();
