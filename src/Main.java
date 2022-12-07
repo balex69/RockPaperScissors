@@ -1,8 +1,8 @@
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
-import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,17 +10,19 @@ public class Main {
         GameWindow gameWindow = new GameWindow();
 
     }
+
     public static class GameWindow extends JFrame implements ActionListener {
 
-        private JButton bPierre, bFeuille, bCiseaux, fermerJeu; // crée les boutons de jeu des trois options
+        private final JButton bPierre, bFeuille, bCiseaux, fermerJeu;  // crée les boutons de jeu des trois options
 
-        private JTextField affichageJoueur, decisionAdversaire, zoneResultat;
+        private final JTextField affichageJoueur, decisionAdversaire, zoneResultat; // crée les champs qui afficheront les résultats
 
-        GameWindow(){ // crée la fenêtre de jeu
+
+        GameWindow() { // crée la fenêtre de jeu
 
             ImageIcon pierreIcon = new ImageIcon("pierre.png"); // (c) Freepik
             ImageIcon feuilleIcon = new ImageIcon("feuille.png"); // (c) Pixel perfect
-            ImageIcon ciseauxIcon = new ImageIcon ("ciseaux.png"); // (c) Freepik
+            ImageIcon ciseauxIcon = new ImageIcon("ciseaux.png"); // (c) Freepik
 
             JLabel debutPartie = new JLabel("Choisissez votre arme pour le duel :");
 
@@ -38,7 +40,7 @@ public class Main {
             bPierre.setIcon(pierreIcon);
             bPierre.setHorizontalTextPosition(JButton.CENTER);
             bPierre.setVerticalTextPosition(JButton.BOTTOM);
-            bPierre.setFont(new Font("Calibri",Font.BOLD,14));
+            bPierre.setFont(new Font("Calibri", Font.BOLD, 14));
             bPierre.setBorder(BorderFactory.createEtchedBorder());
 
             bFeuille = new JButton("Feuille");
@@ -46,7 +48,7 @@ public class Main {
             bFeuille.setIcon(feuilleIcon);
             bFeuille.setHorizontalTextPosition(JButton.CENTER);
             bFeuille.setVerticalTextPosition(JButton.BOTTOM);
-            bFeuille.setFont(new Font("Calibri",Font.BOLD,14));
+            bFeuille.setFont(new Font("Calibri", Font.BOLD, 14));
             bFeuille.setBorder(BorderFactory.createEtchedBorder());
 
             bCiseaux = new JButton("Ciseaux");
@@ -54,7 +56,7 @@ public class Main {
             bCiseaux.setIcon(ciseauxIcon);
             bCiseaux.setHorizontalTextPosition(JButton.CENTER);
             bCiseaux.setVerticalTextPosition(JButton.BOTTOM);
-            bCiseaux.setFont(new Font("Calibri",Font.BOLD,14));
+            bCiseaux.setFont(new Font("Calibri", Font.BOLD, 14));
             bCiseaux.setBorder(BorderFactory.createEtchedBorder());
 
             fermerJeu = new JButton("Quitter le jeu");
@@ -62,7 +64,7 @@ public class Main {
 
             this.setTitle("Shifumi !");
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            this.setSize(275,265);
+            this.setSize(275, 265);
             this.setVisible(true);
 
             this.add(debutPartie);
@@ -90,19 +92,16 @@ public class Main {
             Random aleaOrdi = new Random();
 
             // stocke et affiche le choix du joueur
-            if(e.getSource()==bPierre){
+            if (e.getSource() == bPierre) {
                 choixJoueur = 0;
                 affichageJoueur.setText("Vous avez choisi Pierre!");
-            }
-            else if(e.getSource()==bFeuille){
+            } else if (e.getSource() == bFeuille) {
                 choixJoueur = 1;
                 affichageJoueur.setText("Vous avez choisi Feuille!");
-            }
-            else if(e.getSource()==bCiseaux){
+            } else if (e.getSource() == bCiseaux) {
                 choixJoueur = 2;
                 affichageJoueur.setText("Vous avez choisi Ciseaux!");
-            }
-            else {
+            } else {
                 this.dispose();
             }
 
@@ -110,26 +109,22 @@ public class Main {
             choixOrdinateur = aleaOrdi.nextInt(3);
 
             // permet d'indiquer le choix de l'ordinateur
-            if (choixOrdinateur == 0){
+            if (choixOrdinateur == 0) {
                 decisionAdversaire.setText("L'ordinateur choisit Pierre!");
-            }
-            else if (choixOrdinateur == 1){
+            } else if (choixOrdinateur == 1) {
                 decisionAdversaire.setText("L'ordinateur choisit Feuille!");
-            }
-            else {
+            } else {
                 decisionAdversaire.setText("L'ordinateur choisit Ciseaux!");
             }
 
             // détermine le résultat et l'affiche
-            if (choixJoueur == choixOrdinateur){
+            if (choixJoueur == choixOrdinateur) {
                 zoneResultat.setText("Match nul!");
-            }
-            else if ((choixJoueur == 0 && choixOrdinateur == 1)||
-                    (choixJoueur == 1 && choixOrdinateur == 2)||
-                    (choixJoueur == 2 && choixOrdinateur == 0)){
+            } else if ( (choixJoueur == 0 && choixOrdinateur == 1) ||
+                        (choixJoueur == 1 && choixOrdinateur == 2) ||
+                        (choixJoueur == 2 && choixOrdinateur == 0)) {
                 zoneResultat.setText("Défaite!");
-            }
-            else {
+            } else {
                 zoneResultat.setText("Victoire!");
             }
         }
