@@ -16,15 +16,17 @@ public class Main {
 
         private final JButton bPierre, bFeuille, bCiseaux, fermerJeu;  // crée les boutons de jeu des trois options
 
-        private final JTextField affichageJoueur, decisionAdversaire, zoneResultat; // crée les champs qui afficheront les résultats
+        private final JTextField affichageJoueur, decisionAdversaire, zoneResultat, scoreJ, scoreO; // crée les champs qui afficheront les résultats
 
+        public int resO = 0, resJ = 0;
 
         GameWindow() { // crée la fenêtre de jeu
+
+
 
             ImageIcon pierreIcon = new ImageIcon(getClass().getResource("/res/pierre.png")); // (c) Freepik
             ImageIcon feuilleIcon = new ImageIcon(getClass().getResource("/res/feuille.png")); // (c) Pixel perfect
             ImageIcon ciseauxIcon = new ImageIcon(getClass().getResource("/res/ciseaux.png")); // (c) Freepik
-
 
             JLabel debutPartie = new JLabel("Choisissez votre arme pour le duel :");
 
@@ -36,6 +38,12 @@ public class Main {
 
             zoneResultat = new JTextField(15);
             zoneResultat.setEditable(false);
+
+            scoreJ = new JTextField(7);
+            scoreJ.setEditable(false);
+
+            scoreO = new JTextField(7);
+            scoreO.setEditable(false);
 
             bPierre = new JButton("Pierre");
             bPierre.addActionListener(this);
@@ -66,7 +74,7 @@ public class Main {
 
             this.setTitle("Shifumi !");
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            this.setSize(275, 265);
+            this.setSize(275, 290);
             this.setVisible(true);
 
             this.add(debutPartie);
@@ -76,6 +84,8 @@ public class Main {
             this.add(affichageJoueur);
             this.add(decisionAdversaire);
             this.add(zoneResultat);
+            this.add(scoreJ);
+            this.add(scoreO);
             this.add(fermerJeu);
 
             this.setLayout(new FlowLayout());
@@ -90,6 +100,7 @@ public class Main {
 
             int choixJoueur = 8;
             int choixOrdinateur;
+
 
             Random aleaOrdi = new Random();
 
@@ -126,8 +137,12 @@ public class Main {
                         (choixJoueur == 1 && choixOrdinateur == 2) ||
                         (choixJoueur == 2 && choixOrdinateur == 0)) {
                 zoneResultat.setText("Défaite!");
+                resO++;
+                scoreO.setText("Ordi : "+resO);
             } else {
                 zoneResultat.setText("Victoire!");
+                resJ++;
+                scoreJ.setText("Vous : "+resJ);
             }
         }
     }
