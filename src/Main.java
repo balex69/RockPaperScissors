@@ -21,10 +21,6 @@ public class Main {
 
         GameWindow() { // crée la fenêtre de jeu
 
-            /*ImageIcon pierreIcon = new ImageIcon("pierre.png"); // (c) Freepik
-            ImageIcon feuilleIcon = new ImageIcon("feuille.png"); // (c) Pixel perfect
-            ImageIcon ciseauxIcon = new ImageIcon("ciseaux.png"); // (c) Freepik*/
-
             ImageIcon pierreIcon = new ImageIcon(getClass().getResource("/res/pierre.png")); // (c) Freepik
             ImageIcon feuilleIcon = new ImageIcon(getClass().getResource("/res/feuille.png")); // (c) Pixel perfect
             ImageIcon ciseauxIcon = new ImageIcon(getClass().getResource("/res/ciseaux.png")); // (c) Freepik
