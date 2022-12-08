@@ -133,7 +133,7 @@ public class Main {
             // détermine le résultat et l'affiche
             if (choixJoueur == choixOrdinateur) {
                 zoneResultat.setText("Match nul!");
-                scoreJ.setForeground(new Color(0x00000));
+                scoreJ.setForeground(new Color(0x000000));
                 scoreO.setForeground(new Color(0x000000));
             } else if ( (choixJoueur == 0 && choixOrdinateur == 1) ||
                         (choixJoueur == 1 && choixOrdinateur == 2) ||
@@ -142,7 +142,7 @@ public class Main {
                 resO++;
                 scoreO.setText("Ordinateur : "+resO);
                 scoreO.setForeground(new Color(0xFF0000));
-                scoreJ.setForeground(new Color(0x00000));
+                scoreJ.setForeground(new Color(0x000000));
             } else {
                 zoneResultat.setText("Victoire!");
                 resJ++;
