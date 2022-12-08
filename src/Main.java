@@ -30,19 +30,19 @@ public class Main {
 
             JLabel debutPartie = new JLabel("Choisissez votre arme pour le duel :");
 
-            affichageJoueur = new JTextField(15);
+            affichageJoueur = new JTextField(19);
             affichageJoueur.setEditable(false);
 
-            decisionAdversaire = new JTextField(15);
+            decisionAdversaire = new JTextField(19);
             decisionAdversaire.setEditable(false);
 
-            zoneResultat = new JTextField(15);
+            zoneResultat = new JTextField(19);
             zoneResultat.setEditable(false);
 
-            scoreJ = new JTextField(7);
+            scoreJ = new JTextField(9);
             scoreJ.setEditable(false);
 
-            scoreO = new JTextField(7);
+            scoreO = new JTextField(9);
             scoreO.setEditable(false);
 
             bPierre = new JButton("Pierre");
@@ -133,16 +133,22 @@ public class Main {
             // détermine le résultat et l'affiche
             if (choixJoueur == choixOrdinateur) {
                 zoneResultat.setText("Match nul!");
+                scoreJ.setForeground(new Color(0x00000));
+                scoreO.setForeground(new Color(0x000000));
             } else if ( (choixJoueur == 0 && choixOrdinateur == 1) ||
                         (choixJoueur == 1 && choixOrdinateur == 2) ||
                         (choixJoueur == 2 && choixOrdinateur == 0)) {
                 zoneResultat.setText("Défaite!");
                 resO++;
-                scoreO.setText("Ordi : "+resO);
+                scoreO.setText("Ordinateur : "+resO);
+                scoreO.setForeground(new Color(0xFF0000));
+                scoreJ.setForeground(new Color(0x00000));
             } else {
                 zoneResultat.setText("Victoire!");
                 resJ++;
-                scoreJ.setText("Vous : "+resJ);
+                scoreJ.setText("Joueur : "+resJ);
+                scoreJ.setForeground(new Color(0xFF0000));
+                scoreO.setForeground(new Color(0x000000));
             }
         }
     }
